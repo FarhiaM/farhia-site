@@ -1,36 +1,36 @@
 <template>
   <div id="app">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <Main/>
-    <Contact/>
   </div>
 </template>
 
 <script>
 import Main from './components/Main.vue'
-import Contact from './components/Contact.vue'
 
 export default {
   name: 'app',
   components: {
-    Main,
-    Contact
+    Main
     }
 }
 </script>
 
 <style lang="scss">
 body {
-  margin:0; /* This is used to reset any browser-default margins */ 
+  margin:0; 
+  background-color: #151D26;
+  font-family: Arial;
   }
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+  }
+}
 
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin:0;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
