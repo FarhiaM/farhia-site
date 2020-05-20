@@ -10,16 +10,15 @@
         accusantiu doloremque laudantium, totam rem aperiam, eaque ipsa
       </p>
       <div class="details">
-        <span class="whiteText"
-          ><i class="fa fa-map-marker"></i> Stockholm, Sweden</span
-        >
-        <span class="whiteText"><i class="fa fa-linkedin"></i> LinkedIn</span>
-        <span class="whiteText"><i class="fa fa-twitter"></i> Twitter</span>
+        <span class="whiteText"><i class="fa fa-map-marker"></i> Stockholm, Sweden</span>
+        <span class="whiteText"><a href="https://www.linkedin.com/in/farhiamuse/"><i class="fa fa-linkedin"></i> LinkedIn</a></span>
+        <span class="whiteText"><a href="https://www.twitter.com/farhia_mm"><i class="fa fa-twitter"></i> Twitter</a></span>
       </div>
     </div>
+    
 
     <div class="menu">
-      <button @click="aboutmeClicked()" class="whiteText aboutme">About me</button>
+      <button @click="aboutmeClicked()"  class="whiteText aboutme">About me</button>
       <button @click="projectsClicked()" class="whiteText projects">Projects</button>
       <button @click="playlistClicked()" class="whiteText playlist">Music playlist</button>
     </div>
@@ -48,6 +47,7 @@ export default {
   },
   methods: {
     aboutmeClicked() {
+      event.preventDefault();
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
@@ -62,6 +62,7 @@ export default {
       );
     },
     projectsClicked() {
+      event.preventDefault();
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
@@ -76,6 +77,7 @@ export default {
       );
     },
     playlistClicked() {
+      event.preventDefault();
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
@@ -144,11 +146,13 @@ export default {
     color: #2581cb;
   }
 
-  .projects:hover {
+  .projects:hover,
+  .projects:target {
     color: #2581cb;
   }
 
-  .playlist:hover {
+  .playlist:hover,
+  .playlist:target {
     color: #2581cb;
   }
 }
@@ -163,6 +167,11 @@ export default {
 
 .inactive {
   display: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit; 
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   // tablet

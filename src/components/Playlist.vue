@@ -25,7 +25,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin:20px;
+  margin:2rem;
 }
 
 
