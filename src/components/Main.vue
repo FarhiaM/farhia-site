@@ -10,25 +10,63 @@
         accusantiu doloremque laudantium, totam rem aperiam, eaque ipsa
       </p>
       <div class="details">
-        <span class="whiteText"><i class="fa fa-map-marker"></i> Stockholm, Sweden</span>
-        <span class="whiteText"><a href="https://www.linkedin.com/in/farhiamuse/"><i class="fa fa-linkedin"></i> LinkedIn</a></span>
-        <span class="whiteText"><a href="https://www.twitter.com/farhia_mm"><i class="fa fa-twitter"></i> Twitter</a></span>
+        <span class="whiteText"
+          ><i class="fa fa-map-marker"></i> Stockholm, Sweden</span
+        >
+        <span class="whiteText"
+          ><a href="https://www.linkedin.com/in/farhiamuse/"
+            ><i class="fa fa-linkedin"></i> LinkedIn</a
+          ></span
+        >
+        <span class="whiteText"
+          ><a href="https://www.twitter.com/farhia_mm"
+            ><i class="fa fa-twitter"></i> Twitter</a
+          ></span
+        >
       </div>
     </div>
-    
 
     <div class="menu">
-      <button @click="aboutmeClicked()"  class="whiteText aboutme">About me</button>
-      <button @click="projectsClicked()" class="whiteText projects">Projects</button>
-      <button @click="playlistClicked()" class="whiteText playlist">Music playlist</button>
+      <button @click="aboutmeClicked()" class="whiteText aboutme">
+        About me
+      </button>
+      <button @click="projectsClicked()" class="whiteText projects">
+        Projects
+      </button>
+      <button @click="playlistClicked()" class="whiteText playlist">
+        Playlist
+      </button>
+      <button @click="photographyClicked()" class="whiteText photography">
+        Photography
+      </button>
     </div>
 
     <div class="blue-line"></div>
 
     <div class="page">
-      <div id="page1" class="active-demo"><Aboutme/></div>
+      <div id="page1" class="active-demo"><Aboutme /></div>
       <div id="page2" class="inactive"><Projects /></div>
       <div id="page3" class="inactive"><Playlist /></div>
+      <div id="page4" class="instagram inactive">
+        <instagram-embed
+          :url="
+            'https://www.instagram.com/p/B2gRThbAG7X/?utm_source=ig_web_copy_link'
+          "
+          :max-width="350"
+        />
+        <instagram-embed
+          :url="
+            'https://www.instagram.com/p/B2R3TqEA7yM/?utm_source=ig_web_copy_link'
+          "
+          :max-width="350"
+        />
+        <instagram-embed
+          :url="
+            'https://www.instagram.com/p/BogueQRnRbV/?utm_source=ig_web_copy_link'
+          "
+          :max-width="350"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -37,13 +75,15 @@
 import Aboutme from "@/components/Aboutme.vue";
 import Projects from "@/components/Projects.vue";
 import Playlist from "@/components/Playlist.vue";
+import InstagramEmbed from "vue-instagram-embed";
 
 export default {
   name: "Main",
   components: {
     Playlist,
     Aboutme,
-    Projects
+    Projects,
+    InstagramEmbed
   },
   methods: {
     aboutmeClicked() {
@@ -51,6 +91,8 @@ export default {
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
+      var photography = document.getElementById("page4");
+
       aboutme.className = aboutme.className.replace("inactive", "active-demo");
       projects.className = projects.className.replace(
         "active-demo",
@@ -60,12 +102,18 @@ export default {
         "active-demo",
         "inactive"
       );
+      photography.className = photography.className.replace(
+        "active-demo",
+        "inactive"
+      );
     },
     projectsClicked() {
       event.preventDefault();
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
+      var photography = document.getElementById("page4");
+
       aboutme.className = aboutme.className.replace("active-demo", "inactive");
       projects.className = projects.className.replace(
         "inactive",
@@ -75,18 +123,51 @@ export default {
         "active-demo",
         "inactive"
       );
+      photography.className = photography.className.replace(
+        "active-demo",
+        "inactive"
+      );
     },
     playlistClicked() {
       event.preventDefault();
       var aboutme = document.getElementById("page1");
       var projects = document.getElementById("page2");
       var playlist = document.getElementById("page3");
+      var photography = document.getElementById("page4");
+
       aboutme.className = aboutme.className.replace("active-demo", "inactive");
       projects.className = projects.className.replace(
         "active-demo",
         "inactive"
       );
       playlist.className = playlist.className.replace(
+        "inactive",
+        "active-demo"
+      );
+      photography.className = photography.className.replace(
+        "active-demo",
+        "inactive"
+      );
+    },
+    photographyClicked() {
+      event.preventDefault();
+      var aboutme = document.getElementById("page1");
+      var projects = document.getElementById("page2");
+      var playlist = document.getElementById("page3");
+      var photography = document.getElementById("page4");
+
+      aboutme.className = aboutme.className.replace(
+        "active-demo", 
+        "inactive");
+      projects.className = projects.className.replace(
+        "active-demo",
+        "inactive"
+      );
+      playlist.className = playlist.className.replace(
+        "active-demo",
+        "inactive"
+      );
+      photography.className = photography.className.replace(
         "inactive",
         "active-demo"
       );
@@ -138,7 +219,8 @@ export default {
   cursor: pointer;
 
   button {
-    font-size: 1em;
+    font-size: 0.9em;
+    color: #72889c;
   }
 
   .aboutme:hover,
@@ -155,6 +237,21 @@ export default {
   .playlist:target {
     color: #2581cb;
   }
+
+  .photography:hover,
+  .photography:target {
+    color: #2581cb;
+  }
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+  
+  .instagram{
+    margin:2rem;
+  }
+
 }
 
 .blue-line {
@@ -169,9 +266,9 @@ export default {
   display: none;
 }
 
-a{
+a {
   color: inherit;
-  text-decoration: inherit; 
+  text-decoration: inherit;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   // tablet

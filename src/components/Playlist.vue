@@ -3,8 +3,8 @@
     <div class="spotifyWidget">
       <iframe
         src="https://open.spotify.com/embed/playlist/6WhyfvYNU4M1Kdy1LHpVpR"
-        width="300"
-        height="380"
+        width="350"
+        height="400"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media"
