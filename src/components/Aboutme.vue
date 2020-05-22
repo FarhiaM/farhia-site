@@ -1,6 +1,6 @@
 <template>
   <div class="aboutme">
-    <Section v-for= "t in texts" :key="t.text" :text="t.text"/>
+    <Section class="section" v-for= "t in texts" :key="t.text" :text="t.text"/>
   </div>
 </template>
 
@@ -44,5 +44,11 @@ export default {
 .aboutme{
   padding: 0;
 }
+
+.section:hover{
+  background-color: #192734 !important;
+  padding-top: 5px;
+}
+
 
 </style>
