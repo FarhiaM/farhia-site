@@ -55,14 +55,44 @@ export default {
   }
 }
 
+p{
+  font-family:sans-serif;
+  font-weight: 400;
+  line-height: 1.6
+}
 
-@media (min-width: 1024px) {
  img:hover,
   img:target{
-     border: solid 3px #CCC;
-    -moz-box-shadow: 1px 1px 5px #999;
-    -webkit-box-shadow: 1px 1px 5px #999;
-    box-shadow: 1px 1px 5px #999;
+    border: solid 3px #CCC;
   }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+   // desktop
+  .project {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:2rem;
+  img{
+    height: 30rem;
+    width: 40rem;
+    }
+  }
+
+}
+
+@media (min-width: 1024px) {
+  // desktop
+  .project {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:2rem;
+  img{
+    height: 30rem;
+    width: 40rem;
+    }
+  }
+
 }
 </style>

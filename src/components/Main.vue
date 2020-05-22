@@ -4,23 +4,19 @@
     <img class="profilepic" src="../assets/profilepic.jpg" />
 
     <div class="profile">
-      <h1 class="whiteText">Farhia Muse</h1>
+      <h1 class="whiteText">Farhia M Muse</h1>
       <p class="whiteText">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantiu doloremque laudantium, totam rem aperiam, eaque ipsa
+        Hi and welcome to my page! 🎉 My name is Farhia Muse and I'm a junior
+        developer experienced in web development and test. <br />
+        This site is heavily inspired by my twitter profile 🤩
       </p>
       <div class="details">
-        <span class="whiteText"
+        <span class="whiteText location"
           ><i class="fa fa-map-marker"></i> Stockholm, Sweden</span
         >
-        <span class="whiteText"
+        <span class="whiteText linkedin"
           ><a href="https://www.linkedin.com/in/farhiamuse/"
             ><i class="fa fa-linkedin"></i> LinkedIn</a
-          ></span
-        >
-        <span class="whiteText"
-          ><a href="https://www.twitter.com/farhia_mm"
-            ><i class="fa fa-twitter"></i> Twitter</a
           ></span
         >
       </div>
@@ -47,26 +43,7 @@
       <div id="page1" class="active-demo"><Aboutme /></div>
       <div id="page2" class="inactive"><Projects /></div>
       <div id="page3" class="inactive"><Playlist /></div>
-      <div id="page4" class="instagram inactive">
-        <instagram-embed
-          :url="
-            'https://www.instagram.com/p/B2gRThbAG7X/?utm_source=ig_web_copy_link'
-          "
-          :max-width="350"
-        />
-        <instagram-embed
-          :url="
-            'https://www.instagram.com/p/B2R3TqEA7yM/?utm_source=ig_web_copy_link'
-          "
-          :max-width="350"
-        />
-        <instagram-embed
-          :url="
-            'https://www.instagram.com/p/BogueQRnRbV/?utm_source=ig_web_copy_link'
-          "
-          :max-width="350"
-        />
-      </div>
+      <div id="page4" class="inactive"><Instagram /></div>
     </div>
   </div>
 </template>
@@ -75,7 +52,7 @@
 import Aboutme from "@/components/Aboutme.vue";
 import Projects from "@/components/Projects.vue";
 import Playlist from "@/components/Playlist.vue";
-import InstagramEmbed from "vue-instagram-embed";
+import Instagram from "@/components/Instagram.vue";
 
 export default {
   name: "Main",
@@ -83,7 +60,7 @@ export default {
     Playlist,
     Aboutme,
     Projects,
-    InstagramEmbed
+    Instagram
   },
   methods: {
     aboutmeClicked() {
@@ -156,9 +133,7 @@ export default {
       var playlist = document.getElementById("page3");
       var photography = document.getElementById("page4");
 
-      aboutme.className = aboutme.className.replace(
-        "active-demo", 
-        "inactive");
+      aboutme.className = aboutme.className.replace("active-demo", "inactive");
       projects.className = projects.className.replace(
         "active-demo",
         "inactive"
@@ -193,14 +168,23 @@ export default {
 
 .profile {
   margin: 1.25em;
-}
 
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: #738390;
-  margin-top: 1.25em;
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #738390;
+    margin-top: 1.25em;
+
+    .linkedin {
+      margin-left: 2rem;
+      color: #5aa8e9;
+    }
+
+    .location {
+      color: #5aa8e9;
+    }
+  }
 }
 
 .whiteText {
@@ -244,14 +228,9 @@ export default {
   }
 }
 
-.page{
+.page {
   display: flex;
   justify-content: center;
-  
-  .instagram{
-    margin:2rem;
-  }
-
 }
 
 .blue-line {
@@ -270,17 +249,59 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+h1,
+p,
+span,
+button {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.instagram-embed {
+  max-width: 350px;
+}
+
+
 @media (min-width: 768px) and (max-width: 1023px) {
   // tablet
+  .main {
+    button {
+      font-size: 1.5rem;
+      background: inherit;
+      border: none;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
   // desktop
-}
+  .main {
+    max-width: 66.25rem;
+    margin-right: auto;
+    margin-left: auto;
 
-@media screen and (prefers-color-scheme: light) {
-  p {
-    color: black;
+    button {
+      font-size: 1.3rem;
+      background: inherit;
+      border: none;
+    }
+
+    button:hover,
+    button:active,
+    button:focus,
+    :target {
+      outline: 0;
+      color: #2581cb;
+    }
+
+    .page{
+      .page4{
+      width:900px;
+      border: 1px solid red;
+    }
+    }
   }
 }
 </style>

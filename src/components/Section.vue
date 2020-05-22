@@ -29,12 +29,11 @@ export default {
 .container{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   margin: 1.25rem;
   color:white;
 
   .section-container{
-    margin-left: 0.625rem;
+    margin-left: 1rem;
 
     .section-name{
       color:white;
@@ -65,4 +64,10 @@ export default {
 .blue-line {
   border: 0.05em solid #1f262c;;
   }
+
+  h2,h3,p{
+  font-family:sans-serif;
+  font-weight: 400;
+  line-height: 1.3
+}
 </style>

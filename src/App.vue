@@ -23,26 +23,4 @@ body {
   font-family: Arial;
   }
 
-@media screen and (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-  }
-}
-
-
-#app {
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  // tablet
-  #app {
-    width: 80%;
-  }
-}
-
-@media (min-width: 1024px) {
-  // desktop
-  #app {
-  }
-}
 </style>
