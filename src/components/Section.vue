@@ -1,7 +1,7 @@
 <template>
 <div>
   <div clasS="container">
-    <img class="profilepic" src="../assets/profilepic.jpg" />
+    <img class="profilepic" src="../assets/profilepic.png" />
     <div class="section-container">
       <h2 class="section-name">Farhia M Muse</h2>
       <h3 class="section-handle">@Farhia_MM</h3>

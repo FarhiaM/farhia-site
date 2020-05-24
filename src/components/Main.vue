@@ -1,13 +1,13 @@
 <template>
   <div class="main">
     <div class="banner"></div>
-    <img class="profilepic" src="../assets/profilepic.jpg" />
+    <img class="profilepic" src="../assets/profilepic.png" />
 
     <div class="profile">
       <h1 class="whiteText">Farhia M Muse</h1>
       <p class="whiteText">
-        Hi and welcome to my page! 🎉 My name is Farhia Muse and I'm a junior
-        developer experienced in web development and test. <br />
+        Hi and welcome to my page! 🎉 My name is Farhia Muse and I'm a
+        software developer experienced in web development and test. <br />
         This site is heavily inspired by my twitter profile 🤩
       </p>
       <div class="details">
@@ -154,8 +154,8 @@ export default {
 <style lang="scss" scoped>
 .banner {
   width: 100%;
-  height: 9.375em;
-  background-color: #dc5167;
+  height: 10em;
+  background: url('../assets/banner.jpeg');
 }
 
 .profilepic {

@@ -29,11 +29,11 @@ export default {
         },
         {
           srcImage: "placeholder",
-          description: "TBD 1"
+          description: "More coming soon.."
         },
         {
           srcImage: "placeholder",
-          description: "TBD 2"
+          description: "More coming soon.. "
         }
       ]
     };
