@@ -23,18 +23,18 @@
     </div>
 
     <div class="menu">
-      <button @click="aboutmeClicked()" class="whiteText aboutme">
+      <a @click="aboutmeClicked()" class="button whiteText aboutme">
         About me
-      </button>
-      <button @click="projectsClicked()" class="whiteText projects">
+      </a>
+      <a @click="projectsClicked()" class="button whiteText projects">
         Projects
-      </button>
-      <button @click="playlistClicked()" class="whiteText playlist">
+      </a>
+      <a @click="playlistClicked()" class="button whiteText playlist">
         Playlist
-      </button>
-      <button @click="photographyClicked()" class="whiteText photography">
+      </a>
+      <a @click="photographyClicked()" class="button whiteText photography">
         Photography
-      </button>
+      </a>
     </div>
 
     <div class="blue-line"></div>
@@ -202,29 +202,49 @@ export default {
   outline: none;
   cursor: pointer;
 
-  button {
+  .button {
     font-size: 0.9em;
     color: #72889c;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
   }
 
   .aboutme:hover,
   .aboutme:target {
     color: #2581cb;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
   }
 
   .projects:hover,
   .projects:target {
     color: #2581cb;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
   }
 
   .playlist:hover,
   .playlist:target {
     color: #2581cb;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
   }
 
   .photography:hover,
   .photography:target {
     color: #2581cb;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
   }
 }
 
@@ -282,15 +302,15 @@ button {
     margin-right: auto;
     margin-left: auto;
 
-    button {
+    .button {
       font-size: 1.3rem;
       background: inherit;
       border: none;
     }
 
-    button:hover,
-    button:active,
-    button:focus,
+    .button:hover,
+    .button:active,
+    .button:focus,
     :target {
       outline: 0;
       color: #2581cb;
