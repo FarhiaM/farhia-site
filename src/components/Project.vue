@@ -88,6 +88,7 @@ p{
   flex-direction: column;
   align-items: center;
   margin-top:2rem;
+  width: 40rem;
   img{
     height: 30rem;
     width: 40rem;
