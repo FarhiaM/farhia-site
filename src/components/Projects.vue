@@ -34,8 +34,10 @@ export default {
           description: "A simple rock papper scissors game built with Vue.js and vuex. Also includes error handling when user doesn't pick one of the choices."
         },
         {
-          srcImage: "placeholder",
-          description: "More coming soon.. "
+          srcLink: "https://farhiam.github.io/talo/",
+          srcImage: "talo",
+          altText: "Screenshot of an advice generator website",
+          description: "Talo is an advice generator built using the Advice Slip JSON API."
         }
       ]
     };
